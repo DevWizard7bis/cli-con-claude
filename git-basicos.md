@@ -9,7 +9,7 @@ Inicializa un nuevo repositorio de Git en la carpeta actual. Crea la carpeta ocu
 - **Uso**: `git init`
 
 ### `git status`
-Muestra el estado actual del repositorio: qué archivos han sido modificados, cuáles están en el área de preparación (staging) y cuáles no están siendo rastreados.
+Muestra el estado actual del repositorio: qué archivos han sido modificados, cuáles están en el área de preparación (staging) y cuáles no están siendo rastreados. Actúa como un "diagnóstico" que te indica en qué rama estás y qué cambios están pendientes de guardar.
 - **Uso**: `git status`
 
 ### `git add <archivo>`
