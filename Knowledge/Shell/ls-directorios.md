@@ -1,4 +1,5 @@
 # Comando `ls`: Listar Directorios 📁
+#shell #bash #linux #ls
 
 Este documento detalla las formas de filtrar la salida del comando `ls` para mostrar únicamente las carpetas (directorios), omitiendo los archivos.
 
@@ -36,3 +37,6 @@ La mejor opción si necesitas una lista limpia de rutas para usar en scripts o a
 | `ls -d */` | Nombres con `/` | Muy Rápido | Consulta visual rápida |
 | `ls -l \| grep '^d'` | Detallada | Rápido | Auditoría de permisos |
 | `find` | Rutas limpias | Medio | Scripts y automatización |
+
+> [!INFO] Concepto clave
+> El uso de `grep '^d'` es fundamental en Linux para identificar rápidamente directorios en salidas de formato largo, ya que el primer carácter de los permisos siempre es `d` para directorios y `-` para archivos.

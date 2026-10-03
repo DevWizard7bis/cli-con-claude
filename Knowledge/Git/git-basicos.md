@@ -1,6 +1,5 @@
-$$
-
-$$# Git Básico: Flujo de Trabajo Inicial 🛠️
+# Git Básico: Flujo de Trabajo Inicial 🛠️
+#git #bash #versionado
 
 Este documento resume los comandos fundamentales para iniciar un proyecto y gestionar los cambios en Git.
 
@@ -21,8 +20,9 @@ Añade un archivo específico al **Área de Preparación (Staging Area)**. Indic
 ### `git commit -m "mensaje"`
 Crea una "foto" permanente (snapshot) de los archivos que están en el Staging Area. El mensaje debe describir brevemente qué se cambió.
 - **Uso**: `git commit -m "Primer commit: añadir README"`
-- **Tip Profesional**: Puedes usar `git commit -am "mensaje"` para añadir (`add`) y confirmar (`commit`) en un solo paso. **Importante**: Esto solo funciona con archivos que ya existen en el repositorio; los archivos nuevos siempre requieren `git add` primero.
 
+> [!TIP] Tip Profesional
+> Puedes usar `git commit -am "mensaje"` para añadir (`add`) y confirmar (`commit`) en un solo paso. **Importante**: Esto solo funciona con archivos que ya existen en el repositorio; los archivos nuevos siempre requieren `git add` primero.
 
 ---
 

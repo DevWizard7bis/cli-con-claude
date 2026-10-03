@@ -1,4 +1,5 @@
 # Comando `find`: Búsqueda Avanzada de Archivos y Directorios 🔍
+#shell #bash #linux #find
 
 El comando `find` es una de las herramientas más potentes de Linux para localizar archivos y directorios basándose en diversos criterios (nombre, tipo, tamaño, fecha, etc.).
 
@@ -9,7 +10,9 @@ Para buscar un elemento que contenga una palabra específica en su nombre:
 
 - **Comando**: `find /ruta/donde/buscar -name "*palabra*"`
 - **Ejemplo**: `find . -name "*liceo*"` (Busca cualquier cosa que contenga "liceo" desde la carpeta actual).
-- **Tip**: Usa `-iname` en lugar de `-name` para que la búsqueda ignore mayúsculas y minúsculas.
+
+> [!TIP] Case Insensitive
+> Usa `-iname` en lugar de `-name` para que la búsqueda ignore mayúsculas y minúsculas.
 
 ### 2. Buscar solo Directorios o solo Archivos
 Puedes filtrar los resultados por el tipo de elemento:
