@@ -1,36 +1,66 @@
 # Git Básico: Flujo de Trabajo Inicial 🛠️
 #git #bash #versionado
 
-Este documento resume los comandos fundamentales para iniciar un proyecto y gestionar los cambios en Git.
+Este documento resume los comandos fundamentales para iniciar un proyecto, gestionar los cambios localmente y sincronizarlos con un servidor remoto (como GitHub).
 
-## 🚀 Comandos Principales
+## 🚀 1. Configuración e Inicio
 
 ### `git init`
 Inicializa un nuevo repositorio de Git en la carpeta actual. Crea la carpeta oculta `.git` donde se almacena todo el historial.
 - **Uso**: `git init`
 
-### `git status`
-Muestra el estado actual del repositorio: qué archivos han sido modificados, cuáles están en el área de preparación (staging) y cuáles no están siendo rastreados. Actúa como un "diagnóstico" que te indica en qué rama estás y qué cambios están pendientes de guardar.
-- **Uso**: `git status`
-
-### `git add <archivo>`
-Añade un archivo específico al **Área de Preparación (Staging Area)**. Indica a Git que este archivo debe incluirse en el próximo commit.
-- **Uso**: `git add README.md` (para un archivo) o `git add .` (para añadir todos los cambios del directorio).
-
-### `git commit -m "mensaje"`
-Crea una "foto" permanente (snapshot) de los archivos que están en el Staging Area. El mensaje debe describir brevemente qué se cambió.
-- **Uso**: `git commit -m "Primer commit: añadir README"`
-
-> [!TIP] Tip Profesional
-> Puedes usar `git commit -am "mensaje"` para añadir (`add`) y confirmar (`commit`) en un solo paso. **Importante**: Esto solo funciona con archivos que ya existen en el repositorio; los archivos nuevos siempre requieren `git add` primero.
+### `git clone <url>`
+Copia un repositorio existente desde un servidor remoto a tu máquina local.
+- **Uso**: `git clone https://github.com/usuario/repo.git`
 
 ---
 
-## 🔄 El Flujo Típico
-El ciclo de trabajo más común es:
-1. **Modificar** archivos $\rightarrow$ 2. `git add` (preparar) $\rightarrow$ 3. `git commit` (guardar)
+## 📦 2. Gestión de Cambios Locales
 
-## 💡 Analogía del Paquete
-- **Working Directory**: Tu mesa de trabajo.
-- **Staging Area**: La caja del paquete donde metes lo que vas a enviar.
-- **Commit**: El envío final del paquete al archivo histórico.
+### `git status`
+Muestra el estado actual del repositorio: archivos modificados, en staging o no rastreados. Es el "diagnóstico" esencial antes de cualquier acción.
+- **Uso**: `git status`
+
+### `git add <archivo>`
+Añade archivos al **Área de Preparación (Staging Area)**.
+- **Uso**: `git add README.md` (uno) o `git add .` (todos).
+
+### `git commit -m "mensaje"`
+Crea una "foto" permanente (snapshot) de los archivos en el Staging Area.
+- **Uso**: `git commit -m "Mensaje descriptivo"`
+
+> [!TIP] Tip Profesional
+> Usa `git commit -am "mensaje"` para hacer `add` y `commit` en un solo paso (solo para archivos ya rastreados).
+
+---
+
+## ☁️ 3. Sincronización Remota (GitHub/GitLab)
+
+### `git remote add origin <url>`
+Vincula tu repositorio local con un servidor remoto por primera vez.
+- **Uso**: `git remote add origin https://github.com/usuario/repo.git`
+
+### `git push`
+Sube tus commits locales al servidor remoto.
+- **Uso**: `git push -u origin main` (la primera vez) o simplemente `git push`.
+
+### `git pull`
+Trae los cambios más recientes del servidor y los fusiona con tu copia local. Fundamental para evitar conflictos antes de hacer un push.
+- **Uso**: `git pull origin main`
+
+---
+
+## 🔄 El Flujo de Trabajo Completo
+El ciclo profesional de trabajo es:
+1. **Modificar** $\rightarrow$ 2. `git add` $\rightarrow$ 3. `git commit` $\rightarrow$ 4. `git pull` (por seguridad) $\rightarrow$ 5. `git push`
+
+## 💡 Analogía del Paquete (Completa)
+- **Working Directory**: Tu mesa de trabajo (donde escribes).
+- **Staging Area**: La caja del paquete (donde seleccionas qué enviar).
+- **Commit**: El sello del paquete (le das una identidad y fecha).
+- **Remote (GitHub)**: La oficina central (donde el paquete se guarda para siempre y otros pueden verlo).
+- **Push**: El servicio de mensajería (lleva el paquete de tu mesa a la oficina central).
+- **Pull**: Pedir la última versión del paquete que está en la oficina central.
+
+---
+[[Git-MOC]] $\leftarrow$ Volver al Mapa de Git
