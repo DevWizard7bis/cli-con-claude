@@ -1,0 +1,8 @@
+# Ignorar configuración de Obsidian
+.obsidian/
+
+# Ignorar archivos temporales del sistema
+.DS_Store
+Thumbs.db
+*/.DS_Store
+*/Thumbs.db
